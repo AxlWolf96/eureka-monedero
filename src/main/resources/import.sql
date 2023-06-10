@@ -1,0 +1,10 @@
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('1', '3500');
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('2', '5000');
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('3', '2000');
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('4', '1500');
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('5', '8000');
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('6', '400');
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('7', '6000');
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('8', '10000');
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('9', '2500');
+INSERT INTO `dbmonederos`.`monederos` (`id_persona`, `saldo`) VALUES ('10', '700');
