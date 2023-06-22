@@ -2,6 +2,7 @@ package com.proyecto.monederos.aplicacion.servicio;
 
 import com.proyecto.monederos.dominio.modelo.Monedero;
 import com.proyecto.monederos.dominio.puerto.MonederoRepository;
+import com.proyecto.monederos.infraestructura.adaptador.PersonaFeignClientRest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +13,8 @@ public class DomainMonederoService implements MonederoService {
 
     @Autowired
     private MonederoRepository monederoRepository;
+    @Autowired
+    private PersonaFeignClientRest personaFeignClientRest;
 
     @Override
     public List<Monedero> findAll() {
@@ -25,7 +28,14 @@ public class DomainMonederoService implements MonederoService {
 
     @Override
     public Monedero save(Monedero monedero) {
-        return monederoRepository.save(monedero);
+        
+        Monedero out = null;
+        
+        if (personaFeignClientRest.findById(monedero.getIdPersona()).getBody() != null) {
+            out = monederoRepository.save(monedero);
+        }
+        
+        return out;
     }
 
     @Override
